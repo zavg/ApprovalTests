@@ -12,7 +12,7 @@ class PHPUnitNamer {
 				if (self::isPHPUnitTest($stackTraceLine['file'])) {
 					break;
 				}
-				$this->testDirectory = realpath(dirname($stackTraceLine['file']).'/outputs');
+				$this->testDirectory = dirname($stackTraceLine['file']);
 			}
 			$this->caller = $stackTraceLine;
 		}
